@@ -1,0 +1,15 @@
+name: sample runbookhub
+desc: It is a sample runbook hub
+runbooks:
+- name: sample
+  desc: It is a sample runbook
+  selectors:
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=Secret'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=bootstrap-token-abcdef'
+  - type: jsonPathSelector
+    selector: '{.metadata.namespace}=kube-system'
+  doc: sample/sample.md
