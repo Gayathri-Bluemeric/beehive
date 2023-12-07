@@ -15,3 +15,17 @@ runbooks:
   - type: jsonPathSelector
     selector: '{.metadata.namespace}=kube-system'
   doc: sample/sample.md
+- name: sample2
+  desc: sample2
+  selectors:
+  - type: labelSelector
+    selector: app=test
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=Secret'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=bootstrap-token-abcdef'
+  - type: jsonPathSelector
+    selector: '{.metadata.namespace}=kube-system'
+  doc: sample/sample2.md
