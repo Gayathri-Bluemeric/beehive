@@ -4,6 +4,8 @@ runbooks:
 - name: sample
   desc: It is a sample runbook
   selectors:
+  - type: labelSelector
+    selector: app=test
   - type: jsonPathSelector
     selector: '{.apiVersion}=v1'
   - type: jsonPathSelector
